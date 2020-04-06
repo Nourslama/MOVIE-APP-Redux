@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-container {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: rgb(3, 87, 87);
+  padding: 2% 10%;
 }
 
-.App-link {
-  color: #61dafb;
+.search-container input {
+  outline: 0;
+  font-family: "Raleway", sans-serif;
+
+  border: 0.5px solid rgba(0, 0, 0, 0.295);
+  border-radius: 5px;
+  padding: 0.6em 1.5em;
+  width: 60%;
+  margin: 0 8%;
+}
+.search-container button{
+  margin-left:30px ;
+  font-weight: bold;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  border-radius: 15px;
+
+  padding: 12px; 
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 15px;
+
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.flip-card-back {
+  background-color: #d1e2ee;
+  color: black;
+  transform: rotateY(180deg);
+  border-radius: 15px;
+
+}
+.flip-card-back p{
+  margin-top: 32px;
+  margin-bottom: 40px;
+
+}
+.card-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+
+}
+.flex{
+ 
+  display:flex;
+ justify-content: space-around;
+ flex-direction: column;
+ 
+  
+}
+.flex button{
+  margin:3px auto;
+  width:40%;
+  height: 40px;
+  border-radius: 15px;
+  cursor: pointer;
+
+}
+.flex button:hover{
+  opacity: 0.6;
+}
+.star-gold{
+  color:yellow
+}
+.fa-plus{
+  margin-top: 150px;
+  margin-left: 120px;
+  
+}
+.fa-plus:hover{
+  cursor: pointer;
+}
+.addModal{
+  background-color: lightcoral;
+  height: 500px;
+  width: 30%;
+  margin: 0 auto;
+
+}
+.formModal{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+ width: 60%; 
+ margin: 0 auto;
+ justify-content: center;
+ 
+}
+.formModal input{
+  height: 25px;
+  border-radius: 3px;
+  margin-bottom: 12px;
+  
+}
+
+.formModal label{
+  text-align: left;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.formModal button{
+  margin-left: 12px;
+  cursor: pointer;
+  padding: 1em;
+  border-radius: 3px;
+  border: 1px solid black;
+  background: none;
+}
+.formModal h2{
+  
+font-variant: small-caps;
+}
+.center{
+ text-align: center;
+
 }
